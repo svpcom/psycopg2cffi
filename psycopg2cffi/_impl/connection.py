@@ -367,7 +367,7 @@ class Connection(object):
 
     @property
     def closed(self):
-        return self._closed
+        return self._closed or (libpq.PQstatus(self._pgconn) == libpq.CONNECTION_BAD)
 
     @check_closed
     def xid(self, format_id, gtrid, bqual):
