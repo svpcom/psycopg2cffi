@@ -284,7 +284,7 @@ setup(
     long_description=''.join(README),
     packages=['psycopg2cffi', 'psycopg2cffi._impl', 'psycopg2cffi.tests'],
     install_requires=[
-        'cffi ==0.4, ==0.5',
+        'cffi >=0.4',
         ],
     ext_package='psycopg2cffi',
     ext_modules=ext_modules,
